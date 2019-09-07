@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-#setup fofr Email
+#setup for Email
 from .email_info import EMAIL_HOST,EMAIL_USE_TLS,EMAIL_PORT,EMAIL_HOST_USER,EMAIL_HOST_PASSWORD,EMAIL_USE_SSL
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST =EMAIL_HOST
@@ -32,9 +32,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8f3!e2xjd-s18vbr_i4rhcp0*t)pc1mhp5o9#owir=s9nc^j77'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kdean.pythonanywhere.com']
 
 
 # Application definition
@@ -129,4 +129,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
+STATIC_ROOT='/home/kdean/schools/static'
 
