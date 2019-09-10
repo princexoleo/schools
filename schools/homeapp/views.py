@@ -10,7 +10,7 @@ def home(request):
     context ={
         'reg_status':'True'
     }
-    
+
     if request.method == 'POST':
         your_name = request.POST.get('your_name')
         father_name = request.POST.get('father_name')
@@ -56,7 +56,7 @@ def about(request):
 
 
 def contact(request):
-    return render(request,'homeapp/contact.html')  
+    return render(request,'homeapp/contact.html')
 
 def photo_gallery(request):
     return render(request,'homeapp/gallery.html')
@@ -65,19 +65,19 @@ def video_gallery(request):
     return render(request,'homeapp/video.html')
 
 def social_activities(request):
-    return render(request,'homeapp/social.html')    
+    return render(request,'homeapp/social.html')
 
 def type(request):
-    return render(request,'homeapp/type.html')       
+    return render(request,'homeapp/type.html')
 
 def criteria(request):
-    return render(request,'homeapp/criteria.html')   
+    return render(request,'homeapp/criteria.html')
 
 def history(request):
-    return render(request,'homeapp/history.html')  
+    return render(request,'homeapp/history.html')
 
 def membership(request):
-    return render(request,'homeapp/membership.html') 
+    return render(request,'homeapp/membership.html')
 
 def eventpage(request):
     queryset = Event.objects.order_by('-created_at')
@@ -87,7 +87,7 @@ def eventpage(request):
         'event_title':queryset[0].title,
         'event_description':queryset[0].description,
     }
-    
+
     if request.method == 'POST':
         your_name = request.POST.get('your_name')
         father_name = request.POST.get('father_name')
@@ -120,8 +120,8 @@ def eventpage(request):
         )
         reg_model.save()
         return render(request,'homeapp/eventpage.html',context)
-    return render(request,'homeapp/eventpage.html', context) 
-    
+    return render(request,'homeapp/eventpage.html', context)
+
 def committe(request):
     return render(request, 'homeapp/committee.html')
 
