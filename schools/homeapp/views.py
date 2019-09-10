@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from homeapp.models import Registration
+from homeapp.models import Registration,EventMemberRegistration
 from homeapp.models import Event
 
 # Create your views here.
@@ -80,44 +80,43 @@ def membership(request):
     return render(request,'homeapp/membership.html') 
 
 def eventpage(request):
-    queryset = Event.objects.values('status').get(pk=2)
-    print(queryset['status'])
+    queryset = Event.objects.order_by('-created_at')
+    # print(queryset['status'])
     context ={
-        'reg_status':queryset['status'],
-        'event_title':Event.objects.values('title').get(pk=2)['title'],
+        'reg_status':queryset[0].status,
+        'event_title':queryset[0].title,
+        'event_description':queryset[0].description,
     }
     
     if request.method == 'POST':
         your_name = request.POST.get('your_name')
         father_name = request.POST.get('father_name')
         mother_name = request.POST.get('mother_name')
-        nid_number = request.POST.get('nid_number')
+        reference_number = request.POST.get('reference_number')
         present_address = request.POST.get('present_address')
         parmanent_address = request.POST.get('parmanent_address')
         passing_year = request.POST.get('passing_year')
         dob = request.POST.get('dob')
         blood_group = request.POST.get('blood_group')
         occupation = request.POST.get('occupation')
-        batchmate_name = request.POST.get('batchmate_name')
-        batchmate_phone_number = request.POST.get('batchmate_phone_number')
+        occupation_designation = request.POST.get('occupation_designation')
         your_phone_number = request.POST.get('your_phone_number')
         your_email = request.POST.get('your_email')
-        reg_model = Registration(
+        reg_model = EventMemberRegistration(
             your_name=your_name,
             father_name=father_name,
             mother_name=mother_name,
-            nid_number=nid_number,
             present_address=present_address,
             parmanent_address=parmanent_address,
             passing_year=passing_year,
             dob=dob,
             blood_group=blood_group,
             occupation=occupation,
-            batchmate_name=batchmate_name,
-            batchmate_phone_number=batchmate_phone_number,
+            occupation_designation=occupation_designation,
             your_phone_number=your_phone_number,
             your_email=your_email,
-            #event = Event.objects.values('id').get(pk=2)['id']
+            transaction_number= reference_number,
+            event = queryset[0]
         )
         reg_model.save()
         return render(request,'homeapp/eventpage.html',context)

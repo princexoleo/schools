@@ -275,20 +275,10 @@
 							<h1 class="text-white">
 							কেডিয়ান, নওগাঁ  <br>
 						
-							</h1>
-							<p>
-							স্বাধীন সার্বভৌম গণপ্রজাতন্ত্রী বাংলাদেশে অবাধ আত্মবিকাশ, সামাজিক ও সাংস্কৃতিক আদান প্রদানের নিশ্চয়তা বিধান এবং প্রগতিশীল কর্ম মাধ্যমকে সার্বজনীন করে তোলার লক্ষ্যে নওগাঁ কেডি সরকারী উচ্চ বিদ্যালয়ের প্রাক্তন ছাত্রদের নিয়ে গঠিত একটি  সুস্থ, সুন্দর, অরাজনৈতিক, অসাম্প্রদায়িক ও অলাভজনক জনকল্যাণকামী বহুমুখী সংগঠন যা সংক্ষেপে কেডিয়ান (KDean) নামে পরিচিত।
-							</p>
-							<br><br><br>							
-							<p>
+							<h4 class="text-white pb-20 text-center mb-30">{{ event_title }}</h4> <br>
+							<h4 class="text-white pb-20 text-center mb-30">{{ event_description }}</h4>	
 
-							[বিঃদ্রঃ – এখান থেকে রেজিস্ট্রেশন ফর্ম ডাউনলোড করে যথাযথভাবে পূরণ পূর্বক ১ কপি ছবিসহ হার্ড কপি কেডিয়ান অফিসে প্রেরণ করুন অথবা পূরণ করে ১ কপি ছবি লাগানোর পরে স্ক্যান করে ই-মেইল করুন। ফর্ম পাঠানোর সময় সদস্য ফি বাবদ ১০০/- টাকা রকেট বা বিকাশ নাম্বারে পাঠিয়ে দিন খরচসহ এবং তখনই সংশ্লিষ্ট নাম্বারে জানিয়ে দিন।
-
-							</p>
-
-												<p>
-							
-							
+											<p>
 													রকেট নাম্বারঃ মোহাম্মদ শাব্বির হোসেন – ০১৬৭৮-৬২০৩২১৬ (DBBL Mobile Banking)
 											 </p>
 
@@ -305,22 +295,22 @@
 
 							<form class="form-wrap"  method="post">
 							    {% csrf_token %}
-								<h4 class="text-white pb-20 text-center mb-30">Event Form {{ event_title }}</h4>	
+								
 								
                                 <input type="text" class="form-control" name="your_name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
 								<input type="text" class="form-control" name="father_name" placeholder="Father's Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Father''s Name'" >
 								<input type="text" class="form-control" name="mother_name" placeholder="Mother's Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mother''s Name'" >
-								<input type="number" class="form-control" name="nid_number" placeholder="NID Number/Birth Certificate Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'NID Number/Birth Certificate Number'" >
-								<input type="text" class="form-control" name="present_address" placeholder="Present Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Present Address'" >
-								<input type="text" class="form-control" name="parmanent_address" placeholder="Permanent Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Permanent Address'" >
-								<input type="text" class="form-control" name="passing_year" placeholder=" Passing Year (from year-to year)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'passing year (from year-to year)'" >
 								<input type="text" class="form-control" name="dob" placeholder="Date Of Birth" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date Of Birth'" >
 								<input type="text" class="form-control" name="blood_group" placeholder="Blood Group" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Blood Group'" >
 								<input type="text" class="form-control" name="occupation" placeholder="Occupation" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Occupation'" >
-								<input type="text" class="form-control" name="batchmate_name" placeholder="Batch Mate's Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Batch Mate''s Name'" >
-								<input type="number" class="form-control" name="batchmate_phone_number" placeholder="Batch Mate's Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Batch Mate''s Phone Number'" >
-	                            <input type="phone" class="form-control" name="your_phone_number" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
-								<input type="email" class="form-control" name="your_email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >	
+								<input type="text" class="form-control" name="occupation_designation" placeholder="Occupation Designation" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Occupation'" >
+								<input type="text" class="form-control" name="present_address" placeholder="Present Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Present Address'" >
+								<input type="phone" class="form-control" name="your_phone_number" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
+								<input type="email" class="form-control" name="your_email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
+								<input type="text" class="form-control" name="parmanent_address" placeholder="Permanent Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Permanent Address'" >
+								<input type="text" class="form-control" name="passing_year" placeholder=" Passing Year (from year-to year)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'passing year (from year-to year)'" >
+								<input type="number" class="form-control" name="reference_number" placeholder="Payment Transaction Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Transaction Number'" >
+	                           	
 								
 			
 			
