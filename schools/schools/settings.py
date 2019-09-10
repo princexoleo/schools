@@ -32,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8f3!e2xjd-s18vbr_i4rhcp0*t)pc1mhp5o9#owir=s9nc^j77'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kdean.pythonanywhere.com']
 
